@@ -1,0 +1,143 @@
+/* From Uiverse.io by 20essentials */ 
+.loader {
+  --size: 100px;
+  width: var(--size);
+  height: var(--size);
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform-origin: 50% 100%;
+  transform-style: preserve-3d;
+  perspective: 5000px;
+  animation: rotar 10s linear infinite alternate both;
+
+  .side {
+    width: var(--size);
+    height: var(--size);
+    position: absolute;
+    background: repeating-linear-gradient(
+        to right,
+        transparent 1% 9%,
+        #0f0 9% 10%
+      ),
+      repeating-linear-gradient(to top, transparent 1% 9%, #0f0 9% 10%);
+    background-color: #0008;
+  }
+
+  .behind {
+    transform: translateZ(calc(-1 * var(--size)));
+  }
+
+  .right {
+    transform-origin: 100% 50%;
+    transform: rotateY(-90deg);
+  }
+
+  .left {
+    transform-origin: 0% 50%;
+    transform: rotateY(90deg);
+  }
+
+  .top {
+    transform-origin: 50% 0;
+    transform: rotateX(-90deg);
+  }
+
+  .bottom {
+    transform-origin: 50% 100%;
+    transform: rotateX(90deg);
+  }
+}
+
+@keyframes rotar {
+  0% {
+    transform: translate(-50%, -50%) rotateX(0deg) rotateY(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotateX(360deg) rotateY(360deg);
+  }
+}
+
+/* From Uiverse.io by andrew-demchenk0 */ 
+.cube-loader {
+  position: relative;
+/* u can choose any size */
+  width: 75px;
+  height: 75px;
+  transform-style: preserve-3d;
+  transform: rotateX(-30deg);
+  animation: animate 4s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    transform: rotateX(-30deg) rotateY(0);
+  }
+
+  100% {
+    transform: rotateX(-30deg) rotateY(360deg);
+  }
+}
+
+.cube-loader .cube-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /* top: 0;
+  left: 0; */
+  transform-style: preserve-3d;
+}
+
+.cube-loader .cube-wrapper .cube-span {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /* top: 0;
+  left: 0; */
+                                     /* width 75px / 2 = 37.5px */
+  transform: rotateY(calc(90deg * var(--i))) translateZ(37.5px);
+  background: linear-gradient(
+    to bottom,
+    hsl(270, 51%, 34%) 0%,
+    hsl(262, 22%, 32%) 5.5%,
+    hsl(251, 34%, 37%) 12.1%,
+    hsl(254, 51%, 48%) 19.6%,
+    hsl(245, 48%, 44%) 27.9%,
+    hsl(262, 53%, 47%) 36.6%,
+    hsl(256, 57%, 49%) 45.6%,
+    hsl(247, 62%, 51%) 54.6%,
+    hsl(255, 70%, 53%) 63.4%,
+    hsl(254, 77%, 54%) 71.7%,
+    hsl(257, 83%, 55%) 79.4%,
+    hsl(265, 88%, 56%) 86.2%,
+    hsl(256, 93%, 57%) 91.9%,
+    hsl(261, 96%, 58%) 96.3%,
+    hsl(254, 98%, 58%) 99%,
+    hsl(263, 99%, 58%) 100%
+  );
+}
+
+.cube-top {
+  position: absolute;
+  width: 75px;
+  height: 75px;
+  background: var(--light-to-dark-gradient);
+                      /* width 75px / 2 = 37.5px */
+  transform: rotateX(90deg) translateZ(37.5px);
+  transform-style: preserve-3d;
+}
+
+.cube-top::before {
+  content: '';
+  position: absolute;
+/* u can choose any size */
+  width: 75px;
+  height: 75px;
+  background: hsl(269, 42%, 41%) 19.6%;
+  transform: translateZ(-90px);
+  filter: blur(10px);
+  box-shadow: 0 0 10px #323232,
+              0 0 20px hsl(253, 42%, 41%) 19.6%,
+              0 0 30px #323232,
+              0 0 40px hsl(258, 42%, 41%) 19.6%;
+}
