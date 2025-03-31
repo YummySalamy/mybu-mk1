@@ -1,7 +1,4 @@
-import { FaHome, FaCog, FaBolt, FaWaveSquare, FaCogs } from 'react-icons/fa';
-import { SiSemrush } from 'react-icons/si';
-import { GiFallDown, GiElectricalResistance, GiPsychicWaves, GiHeatHaze } from 'react-icons/gi';
-import { IoLogoCapacitor } from 'react-icons/io5';
+import { FaHome, FaBoxes, FaDatabase, FaRobot, FaChartLine, FaEnvelopeOpenText, FaCogs, FaComments, FaBullhorn, FaUsers } from 'react-icons/fa';
 
 export const SidebarItems = [
   {
@@ -12,35 +9,52 @@ export const SidebarItems = [
     navItems: [],
   },
   {
-    label: 'Physics Mechanics',
-    icon: <FaCogs />,
+    label: 'Conversations',
+    icon: <FaComments />,
+    href: '/app/conversations',
+    isNavTitle: false,
+    navItems: [],
+  },
+  {
+    label: 'Inventory',
+    icon: <FaBoxes />,
+    href: '/app/inventory',
+    isNavTitle: false,
+    navItems: [],
+  },
+  {
+    label: 'Leads',
+    icon: <FaUsers />,
+    href: '/app/leads',
+    isNavTitle: false,
+    navItems: [],
+  },
+  {
+    label: 'Campaigns',
+    icon: <FaBullhorn />,
+    href: '/app/campaigns',
+    isNavTitle: false,
+    navItems: [],
+  },
+  {
+    label: 'AI center',
+    icon: <FaRobot />,
     isNavTitle: false,
     navItems: [
-      { label: 'Free Fall Experiment', icon: <GiFallDown />, href: '/app/free-fall' },
-      { label: 'Projectile Motion', icon: <SiSemrush /> , href: '/app/projectile-motion' },
+      { label: 'Chatbots', icon: <FaComments />, href: '/app/chatbots' },
+      { label: 'AI Control', icon: <FaCogs />, href: '/app/ai-control' },
     ],
   },
   {
-    label: 'Physics Electricity',
-    icon: <FaBolt />,
+    label: 'Reports',
+    icon: <FaChartLine />,
+    href: '/app/reports',
     isNavTitle: false,
-    navItems: [
-      { label: 'Ohm’s Law Experiment', icon: <GiElectricalResistance />,  href: '/app/ohms-law' },
-      { label: 'Capacitance Measurement', icon: <IoLogoCapacitor />, href: '/app/capacitance' },
-    ],
-  },
-  {
-    label: 'Physics Heat and Waves',
-    icon: <FaWaveSquare />,
-    isNavTitle: false,
-    navItems: [
-      { label: 'Heat Transfer', icon: <GiHeatHaze />, href: '/app/heat-transfer' },
-      { label: 'Wave Interference', icon: <GiPsychicWaves />, href: '/app/wave-interference' },
-    ],
+    navItems: [],
   },
   {
     label: 'Settings',
-    icon: <FaCog />,
+    icon: <FaCogs />,
     href: '/app/settings',
     isNavTitle: false,
     navItems: [],

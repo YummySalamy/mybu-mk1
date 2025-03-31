@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import Card from '../../components/cards/Card';
+import WaveCard from '../../components/cards/WaveCard';
 import './assets/Home.css';
 
 const HomePage = () => {
@@ -15,7 +16,9 @@ const HomePage = () => {
           buttonLabel="Book a Call"
           onButtonClick={() => alert("¡Llamada reservada!")}
         />
+        
         </div>
+        {/* <WaveCard /> */}
       </main>
     </div>
   );

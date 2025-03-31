@@ -1,76 +1,61 @@
 .card {
-  --white: hsl(0, 0%, 100%);
-  --black: hsl(240, 15%, 9%);
-  --paragraph: hsl(0, 0%, 83%);
-  --line: hsl(240, 9%, 17%);
-  --primary: hsl(266, 92%, 58%);
-
   position: relative;
-
   display: flex;
   flex-direction: column;
   gap: 1rem;
-
   padding: 1rem;
   width: 19rem;
-  background-color: hsla(240, 15%, 9%, 1);
-  background-image: radial-gradient(
-      at 88% 40%,
-      hsla(240, 15%, 9%, 1) 0px,
-      transparent 85%
-    ),
-    radial-gradient(at 49% 30%, hsla(240, 15%, 9%, 1) 0px, transparent 85%),
-    radial-gradient(at 14% 26%, hsla(240, 15%, 9%, 1) 0px, transparent 85%),
-    radial-gradient(at 0% 64%, hsla(263, 93%, 56%, 1) 0px, transparent 85%),
-    radial-gradient(at 41% 94%, hsla(284, 100%, 84%, 1) 0px, transparent 85%),
-    radial-gradient(at 100% 99%, hsla(306, 100%, 57%, 1) 0px, transparent 85%);
+
+  /* Fondo dinámico con gradientes radiales */
+  background-color: var(--background);
+  background-image:
+    radial-gradient(at 88% 40%, var(--background) 0px, transparent 85%),
+    radial-gradient(at 49% 30%, var(--background) 0px, transparent 85%),
+    radial-gradient(at 14% 26%, var(--background) 0px, transparent 85%),
+    radial-gradient(at 0% 64%, var(--icon-active) 0px, transparent 85%),
+    radial-gradient(at 41% 94%, #b0e6ff 0px, transparent 85%),
+    radial-gradient(at 100% 99%, #89d2f7 0px, transparent 85%);
 
   border-radius: 1rem;
-  box-shadow: 0px -16px 24px 0px rgba(255, 255, 255, 0.25) inset;
+  box-shadow: 0px -16px 24px 0px rgba(255, 255, 255, 0.15) inset;
 }
 
 .card .card__border {
   overflow: hidden;
   pointer-events: none;
-
   position: absolute;
   z-index: -10;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-
   width: calc(100% + 2px);
   height: calc(100% + 2px);
   background-image: linear-gradient(
     0deg,
-    hsl(0, 0%, 100%) -50%,
-    hsl(0, 0%, 40%) 100%
+    var(--background) -50%,
+    var(--subnav-bg) 100%
   );
-
   border-radius: 1rem;
 }
 
 .card .card__border::before {
   content: "";
   pointer-events: none;
-
   position: fixed;
   z-index: 200;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%), rotate(0deg);
+  transform: translate(-50%, -50%) rotate(0deg);
   transform-origin: left;
-
   width: 200%;
   height: 10rem;
   background-image: linear-gradient(
     0deg,
-    hsla(0, 0%, 100%, 0) 0%,
-    hsl(277, 95%, 60%) 40%,
-    hsl(277, 95%, 60%) 60%,
-    hsla(0, 0%, 40%, 0) 100%
+    rgba(255, 255, 255, 0) 0%,
+    var(--icon-active) 40%,
+    var(--icon-active) 60%,
+    rgba(0, 0, 0, 0) 100%
   );
-
   animation: rotate 8s linear infinite;
 }
 
@@ -80,24 +65,29 @@
   }
 }
 
+.card_title__container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+}
+
 .card .card_title__container .card_title {
   font-size: 1rem;
-  color: var(--white);
+  color: var(--text-color);
 }
 
 .card .card_title__container .card_paragraph {
-  margin-top: 0.25rem;
+  margin: 0.25rem;
   width: 65%;
-
-  font-size: 0.5rem;
-  color: var(--paragraph);
+  font-size: 0.7rem;
+  color: var(--link-color);
 }
 
 .card .line {
   width: 100%;
   height: 0.1rem;
-  background-color: var(--line);
-
+  background-color: var(--subnav-bg);
   border: none;
 }
 
@@ -117,41 +107,44 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
   width: 1rem;
   height: 1rem;
-  background-color: var(--primary);
-
+  background-color: var(--icon-active);
   border-radius: 50%;
 }
 
 .card .card__list .card__list_item .check .check_svg {
   width: 0.75rem;
   height: 0.75rem;
-
-  fill: var(--black);
+  fill: var(--background);
 }
 
 .card .card__list .card__list_item .list_text {
   font-size: 0.75rem;
-  color: var(--white);
+  color: var(--text-color);
 }
 
 .card .button {
   cursor: pointer;
-
   padding: 0.5rem;
   width: 100%;
   background-image: linear-gradient(
     0deg,
-    rgba(94, 58, 238, 1) 0%,
-    rgba(197, 107, 240, 1) 100%
+    #00b4ff 0%,
+    #67d0ff 100%
   );
-
   font-size: 0.75rem;
-  color: var(--white);
-
+  color: var(--background);
   border: 0;
   border-radius: 9999px;
-  box-shadow: inset 0 -2px 25px -4px var(--white);
+  box-shadow: inset 0 -2px 25px -4px var(--subnav-bg);
+  transition: background 0.3s ease;
+}
+
+.card .button:hover {
+  background-image: linear-gradient(
+    0deg,
+    #00a4e0 0%,
+    #50c3f7 100%
+  );
 }

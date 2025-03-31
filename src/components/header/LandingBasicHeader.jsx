@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import ToggleSwitch from '../toggle-switch/ToggleSwitch';
-import MaibuLogo from '../../assets/maibu_logo.png';
+import MyBuLogo from '../../assets/MyBu_logo.png';
 import { Link } from 'react-router-dom';
 import './assets/Header.css';
 import { FaBars } from 'react-icons/fa';
@@ -17,7 +17,7 @@ const BasicHeader = ({ toggleTheme, currentTheme }) => {
       <div className="container">
         {/* Logo */}
         <div className="logo">
-            <img src={MaibuLogo} alt="Maibu Logo" />
+            <img src={MyBuLogo} alt="Maibu Logo" />
         </div>
 
         {/* Navigation Items */}

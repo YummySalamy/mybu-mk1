@@ -8,7 +8,7 @@ const LandingPage = ({toggleTheme}) => {
     <div className="landing-page">
       <BasicHeader toggleTheme={toggleTheme} />
       <TwoColumnsHero
-        title="Welcome to Maibu"
+        title="Welcome to MyBu"
         description="Your all in one business administrator, use all the power of AI to automate your business."
         buttonLabel="Get started"
         onButtonClick={() => console.log('Button clicked')}

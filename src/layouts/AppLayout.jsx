@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Sidebar from '../components/sidebar/Sidebar';
+import AppHeader from '../components/header/AppHeader';
 import { AppRoutes } from '../routes';
 import '../App.css';
 
@@ -20,6 +21,7 @@ const AppLayout = () => {
     <div className="app">
       <Sidebar toggleTheme={toggleTheme} currentTheme={theme} />
       <div className="content">
+        {/* <AppHeader /> */}
         <Routes>
           {AppRoutes.map((route, index) => (
             <Route key={index} path={route.path} element={route.element} />

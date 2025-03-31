@@ -1,0 +1,14 @@
+.conversations-wrapper {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  background: var(--background);
+  color: var(--text-color);
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .conversations-wrapper {
+    flex-direction: column;
+  }
+}
