@@ -10,6 +10,12 @@
   --border-radius: 10px;
   --transition-time: 0.3s;
   --light-to-dark-gradient: linear-gradient(300deg, #01befe, #fff);
+  --bubble-message-client: #e6f7ff;
+  --bubble-message-human-agent: #d2e4ff;
+  --bubble-message-ai-agent: #f0e5ff;
+  --bubble-message-client-text: #333;
+  --bubble-client-time: #8f8f8f;
+  --bubble-agent-time: #8f8f8f;
 }
 
 [data-theme='dark'] {
@@ -22,6 +28,12 @@
   --subnav-bg: #333;
   --icon-active: #01befe;
   --light-to-dark-gradient: linear-gradient(300deg, #01befe, #1e1e2f);
+  --bubble-message-client: #c0c0c0;
+  --bubble-message-human-agent: #01befe;
+  --bubble-message-ai-agent: #1e5063;
+  --bubble-message-client-text: #333;
+  --bubble-client-time: #747474;
+  --bubble-agent-time: #ccc;
 }
 
 html, body {
@@ -43,7 +55,7 @@ html, body {
 
 .content {
   margin-left: 250px;
-  padding: 1.5rem;
+  /* padding: 1.5rem; */
   width: calc(100%);
   height: 100vh;
   overflow-y: auto;

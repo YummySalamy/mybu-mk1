@@ -6,6 +6,7 @@
   padding: 1rem;
   overflow-y: auto;
   height: 100%;
+  animation: slideIn 0.5s;
 }
 
 .panel-title {
@@ -39,8 +40,9 @@
 }
 
 .chat-item.active {
-  background: var(--icon-active);
+  background: var(--light-to-dark-gradient);
   color: #fff;
+  transition: background-color var(--transition-time), box-shadow var(--transition-time);
 }
 
 .chat-info {
@@ -51,6 +53,7 @@
 .chat-name {
   font-weight: 600;
   font-size: 0.95rem;
+    color: var(--text-color);   
 }
 
 .chat-preview {

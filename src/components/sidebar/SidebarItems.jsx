@@ -1,4 +1,5 @@
-import { FaHome, FaBoxes, FaDatabase, FaRobot, FaChartLine, FaEnvelopeOpenText, FaCogs, FaComments, FaBullhorn, FaUsers } from 'react-icons/fa';
+import { FaHome, FaBoxes, FaRobot, FaChartLine, FaCogs, FaComments, FaBullhorn, FaUsers } from 'react-icons/fa';
+import { LuBotMessageSquare, LuBot } from "react-icons/lu";
 
 export const SidebarItems = [
   {
@@ -41,8 +42,8 @@ export const SidebarItems = [
     icon: <FaRobot />,
     isNavTitle: false,
     navItems: [
-      { label: 'Chatbots', icon: <FaComments />, href: '/app/chatbots' },
-      { label: 'AI Control', icon: <FaCogs />, href: '/app/ai-control' },
+      { label: 'Chatbots', icon: <LuBotMessageSquare />, href: '/app/chatbots' },
+      { label: 'AI Control', icon: <LuBot />, href: '/app/ai-control' },
     ],
   },
   {
