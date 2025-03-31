@@ -44,7 +44,7 @@
 }
 
 /* CTA Section */
-.cta-section {
+.cta-section_header {
   display: flex;
   align-items: center;
   gap: 1rem;

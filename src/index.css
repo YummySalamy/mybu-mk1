@@ -11,6 +11,8 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  height: 100%;
+  width: 100% !important;
 }
 
 body {
@@ -36,9 +38,6 @@ button {
   background-color: var(--icon-active);
   cursor: pointer;
   transition: all 0.25s;
-}
-button:hover {
-  border-color: var(--icon-active);
 }
 
 input {

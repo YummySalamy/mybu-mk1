@@ -4,6 +4,7 @@ import { SidebarItems } from './SidebarItems';
 import { FaChevronLeft, FaChevronDown } from 'react-icons/fa';
 import { FaRegLightbulb } from "react-icons/fa6";
 import { FaMoon } from "react-icons/fa";
+import MyBuLogo from '../../assets/MyBu_logo.png';
 import './assets/Sidebar.css';
 
 const Sidebar = ({ toggleTheme, currentTheme }) => {
@@ -109,6 +110,7 @@ const Sidebar = ({ toggleTheme, currentTheme }) => {
             </button>
           </li>
         </ul>
+        
       </nav>
     </div>
   );

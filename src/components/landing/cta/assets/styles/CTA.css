@@ -1,0 +1,31 @@
+.cta-section {
+  padding: 3rem 2rem;
+  text-align: center;
+  background: var(--background);
+  color: var(--icon-active);
+}
+
+.cta-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.cta-section p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.cta-button {
+  background: var(--icon-active);
+  color: var(--background);
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 999px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+  background: #e0f7ff;
+}

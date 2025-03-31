@@ -30,8 +30,8 @@ const BasicHeader = ({ toggleTheme, currentTheme }) => {
         </nav>
 
         {/* Call-to-actions */}
-        <div className="cta-section">
-            <Link to="/app">
+        <div className="cta-section_header">
+            <Link to="/app/home">
                 <button className='login-button'>Login</button>
             </Link>
         </div>

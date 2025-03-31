@@ -1,18 +1,19 @@
 import React from 'react';
 import BasicHeader from '../../components/header/LandingBasicHeader';
-import TwoColumnsHero from '../../components/hero/TwoColumnsHero';
+import HeroSection from '../../components/hero/HeroSection';
+import FeaturesSection from '../../components/landing/features/FeaturesSection';
+import CTASection from '../../components/landing/cta/CTASection';
+import Footer from '../../components/landing/footer/Footer';
 import './assets/LandingPage.css';
 
-const LandingPage = ({toggleTheme}) => {
+const LandingPage = ({ toggleTheme }) => {
   return (
     <div className="landing-page">
       <BasicHeader toggleTheme={toggleTheme} />
-      <TwoColumnsHero
-        title="Welcome to MyBu"
-        description="Your all in one business administrator, use all the power of AI to automate your business."
-        buttonLabel="Get started"
-        onButtonClick={() => console.log('Button clicked')}
-        />
+      <HeroSection />
+      <FeaturesSection />
+      <CTASection />
+      <Footer />
     </div>
   );
 };

@@ -43,7 +43,7 @@ html, body {
   background: var(--background);
   color: var(--text-color);
   height: 100%;
-  overflow: hidden;
+  width: 100%;
 }
 
 .app {
@@ -60,6 +60,14 @@ html, body {
   height: 100vh;
   overflow-y: auto;
   transition: margin-left var(--transition-time);
+}
+
+.page-wrapper {
+  padding: 1.5rem;
+  max-width: 900px;
+  margin: auto;
+  animation: fadeInAndSlideUp 0.5s ease;
+  color: var(--text-color);
 }
 
 .sidebar.closed ~ .content {
